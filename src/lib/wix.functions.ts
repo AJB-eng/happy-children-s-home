@@ -2,8 +2,8 @@ import { createServerFn } from '@tanstack/react-start';
 
 // The only public fields returned here are already displayed on the published Wix site.
 export const getWixSite = createServerFn({ method: 'GET' }).handler(async () => {
-  const projectKey = process.env.LOVABLE_API_KEY;
-  const connectionKey = process.env.WIX_API_KEY;
+  const projectKey = process.env['LOVABLE_API_KEY'];
+  const connectionKey = process.env['WIX_API_KEY'];
   if (!projectKey || !connectionKey) throw new Error('The Wix connection is not configured.');
   const response = await fetch('https://connector-gateway.lovable.dev/wix/site-properties/v4/properties', {
     headers: {
