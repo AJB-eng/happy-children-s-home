@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep original Wix page copy in a published-content snapshot and share the site shell across distinct TanStack routes, because this Wix site has no CMS collections.
+- Read public Wix business properties through a server function and the linked connector gateway; never expose workspace credentials or non-public Wix resources to the browser.
+- Store downloaded original Wix media as Lovable asset pointers, preserving source asset IDs for traceability.

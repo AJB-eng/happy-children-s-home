@@ -62,24 +62,24 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.125rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.294 0.077 254);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --primary: oklch(0.294 0.077 254);
   --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
+  --secondary: oklch(0.965 0.006 255);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
+  --muted-foreground: oklch(0.386 0.085 258);
   --accent: oklch(0.968 0.007 247.896);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
+  --border: oklch(0.492 0.087 258);
   --input: oklch(0.929 0.013 255.508);
   --ring: oklch(0.704 0.04 256.788);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -140,5 +140,27 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
+    margin: 0;
+    letter-spacing: 0;
   }
+}
+
+:root {
+  --font-body: 'Open Sans', Arial, Helvetica, sans-serif;
+  --font-heading: 'Poppins', Arial, Helvetica, sans-serif;
+  --donation: oklch(0.556 0.129 66);
+  --donation-text: oklch(0.62 0.144 62);
+  --mission-background: oklch(0.975 0.023 68);
+  --banner-link: oklch(0.452 0.313 264);
+  --photo-overlay: oklch(0.22 0.04 254 / 55%);
+}
+
+@theme inline {
+  --font-body: var(--font-body);
+  --font-heading: var(--font-heading);
+  --color-donation: var(--donation);
+  --color-donation-text: var(--donation-text);
+  --color-mission-background: var(--mission-background);
+  --color-banner-link: var(--banner-link);
 }
