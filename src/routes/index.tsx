@@ -1,24 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { Button } from '@/components/ui/button';
+import { Site, wixSiteOptions, DonateButton, CallToAction, Paragraphs } from '@/components/wix-site';
+import { community, brothers, martha, family, homeBlocks, homeServices, pageHead } from '@/lib/wix-content';
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+export const Route = createFileRoute('/')({head:()=>pageHead('Home','We give back to the needy community. Supporting education, food, healthcare, and love for vulnerable children in Kumi.'),loader:({context})=>context.queryClient.ensureQueryData(wixSiteOptions),component:Index});
+function Index() { return <Site><section className="home-opening"><div className="home-actions"><DonateButton>Donate<br/>Now</DonateButton><Button asChild variant="wixOutline" className="program-button"><Link to="/services">Explore Our<br/>Programs</Link></Button></div><img className="community-image" src={community} alt="Happy Children's Home community gathering" /></section><section className="statistics"><div><strong>2023</strong><h3>Year Established</h3></div><div><strong>40+</strong><h3>Children Under Care</h3></div><div><strong>3 to<br/>40</strong><h3>Our Growth<br/>Story</h3></div></section><section className="home-story"><p className="story-eyebrow">We give back to the needy community.</p><div className="story-grid"><div><h2>{homeBlocks[2]}</h2><Paragraphs text={homeBlocks[3] ?? ''}/><Button asChild variant="wixOutline"><Link to="/about">Read Our Story</Link></Button></div><img src={brothers} alt="Allan, Shadrack, and Elvis" /></div></section><section className="home-services"><h2>What We Do</h2><div className="home-service-grid">{homeServices.map(s=><article className="service-card" key={s.name}><img src={s.icon} alt=""/><h3>{s.name}</h3><p>{s.description}</p></article>)}</div><Button asChild variant="wixOutline"><Link to="/services">See All Services</Link></Button></section><section className="martha-story"><img className="martha-portrait" src={martha} alt="Martha"/><div><h2>{homeBlocks.find(t=>t.startsWith('From Child Labor'))}</h2><p>{homeBlocks.find(t=>t.startsWith('When a tragic'))}</p><Button asChild variant="wixOutline"><Link to="/about" hash="martha">Read Martha's Story</Link></Button><img className="family-image" src={family} alt="Martha and her family"/></div></section><CallToAction/><section className="home-contact"><a href="https://wa.me/256705775486" target="_blank" rel="noreferrer">WhatsApp</a><a href="mailto:happychildrenshome9@gmail.com">Email Us</a><Link to="/contact">Contact Us</Link></section></Site> }
