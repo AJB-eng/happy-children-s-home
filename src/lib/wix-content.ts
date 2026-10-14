@@ -32,6 +32,29 @@ export const kindness = between(pageText('Donate / Sponsor'), 'Your Kindness Cha
 export const serviceNames = ['Education', 'Nutrition', 'Clothing', 'Shelter', 'Medical Care', 'Vocational Skills'];
 export const serviceIcons = ['1ea502_6f8f875eaead4090825b5e14a6619051~mv2.jpg','1ea502_3b3d003dcb1c41998e9ac8dcba6fcede~mv2.jpg','1ea502_027cc372925e4e958c1a1470fae06067~mv2.jpg','1ea502_4ea922b3026f45ce91fa16106e81db6c~mv2.jpg','1ea502_a21833f696724c99adddf02e2c019ca4~mv2.jpg','1ea502_273a804690a04286b7001d08231cfb46~mv2.jpg'];
 export const homeServices = serviceNames.map((name, i) => ({name, description: between(published.home.text, `\n${name}\n`, i < 5 ? `\n${serviceNames[i+1]}\n` : 'See All Services'), icon: image(serviceIcons[i] ?? '')}));
-export function pageHead(title: string, description: string) {
-  return {meta: [{title: `${title} | Happy Children's Home`},{name:'description',content:description},{property:'og:title',content:`${title} | Happy Children's Home`},{property:'og:description',content:description},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]};
+export function pageHead(title: string, description: string, path: string = '') {
+  const pageTitle = title === 'Home' ? "Happy Children's Home | Orphan Care & Education in Kumi, Uganda" : `${title} | Happy Children's Home`;
+  const canonicalUrl = `https://happychildrenshome.org${path}`;
+  const defaultOgImage = 'https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp';
+
+  return {
+    meta: [
+      { title: pageTitle },
+      { name: 'description', content: description },
+      { name: 'robots', content: 'index, follow' },
+      { property: 'og:site_name', content: "Happy Children's Home" },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: canonicalUrl },
+      { property: 'og:title', content: pageTitle },
+      { property: 'og:description', content: description },
+      { property: 'og:image', content: defaultOgImage },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: pageTitle },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: defaultOgImage },
+    ],
+    links: [
+      { rel: 'canonical', href: canonicalUrl },
+    ],
+  };
 }

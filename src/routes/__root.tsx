@@ -102,11 +102,53 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  name: "Happy Children's Home",
+  alternateName: "Happy Children's Home Kumi",
+  url: "https://happychildrenshome.org",
+  logo: "https://happychildrenshome.org/assets/1ea502_2d64a9f7aaf249f3aefd64de277cf45a~mv2.webp",
+  image: "https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
+  description: "Community-Based Organisation in Kumi, Uganda dedicated to rescuing vulnerable orphans and providing education, food, healthcare, and safe shelter.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Okouba Village, Omatenga Road, North Division",
+    addressLocality: "Kumi Municipal Council",
+    addressRegion: "Kumi District",
+    addressCountry: "UG",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+256 705 775 486",
+    contactType: "General Inquiries",
+    email: "happychildrenshome9@gmail.com",
+    availableLanguage: ["English", "Ateso"],
+  },
+  foundingDate: "2023",
+  founders: [
+    {
+      "@type": "Person",
+      name: "Lanyero Irene Okot",
+      jobTitle: "Founder & Care Director",
+    },
+    {
+      "@type": "Person",
+      name: "Opio Joseph Ekodeu",
+      jobTitle: "Co-Founder & Operations Director",
+    },
+  ],
+};
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body>
         {children}

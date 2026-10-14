@@ -228,13 +228,13 @@ a[data-slot],.program-button {font-size:16px;}
 .text-action {background:transparent;border-color:transparent;}
 .home-contact {display:grid;grid-template-columns:repeat(3,auto);justify-content:space-evenly;align-items:center;padding:40px 15%;}
 .services-page {padding:60px 40px 48px;}
-.services-page>h2 {margin-bottom:90px;}
+.services-page>h1, .services-page>h2 {font-size:48px;line-height:1;margin-bottom:90px;}
 .services-grid {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 68px;position:relative;}
 .services-grid:before {content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--border);}
 .services-grid .service-card {min-height:260px;}
 .services-grid .service-card>img {margin-bottom:28px;}
 .contact-page {padding:60px 40px 60px;}
-.contact-page h2 {margin-bottom:30px;}
+.contact-page h1, .contact-page h2 {font-size:48px;line-height:1;margin-bottom:30px;}
 .contact-details {max-width:482px;}
 .contact-details h3 {font-size:24px;margin-top:26px;}
 .contact-details a {font-size:16px;display:block;overflow-wrap:anywhere;}
@@ -304,7 +304,7 @@ a[data-slot],.program-button {font-size:16px;}
  .home-services {padding:60px 24px 40px;}.home-service-grid {grid-template-columns:1fr;gap:30px;margin:30px 0 40px;text-align:center;}.home-service-grid .service-card {padding:0;min-height:170px;}.home-service-grid .service-card>img {width:48px;height:48px;object-fit:contain;margin:0 auto 20px;}.home-service-grid .service-card h3 {font-size:18px;margin-bottom:24px;}
  .martha-story {grid-template-columns:1fr;padding:40px 24px 0;}.martha-images {gap:24px;}.martha-portrait {width:100%;height:auto;aspect-ratio:342/299;margin:0;object-position:center;}.family-image {height:auto;aspect-ratio:638/283;margin:0;}.martha-copy {padding:48px 24px 60px;margin-top:0;}.martha-copy h2 {margin-bottom:12px;}.martha-copy p {max-width:none;margin-bottom:40px;}.martha-copy a {display:flex;margin:0 auto;}
  .kindness-band {padding:60px 24px;}.martha-story+.kindness-band {padding:80px 24px;}.home-contact {grid-template-columns:1fr;gap:16px;justify-items:center;padding:40px 24px;}
- .services-page {padding:60px 24px 40px;}.services-page>h2 {margin-bottom:40px;}.services-grid {grid-template-columns:1fr;gap:24px;}.services-grid:before {display:none;}.services-grid .service-card {min-height:260px;padding:24px;}
+ .services-page {padding:60px 24px 40px;}.services-page>h1, .services-page>h2 {margin-bottom:40px;font-size:28px;}.services-grid {grid-template-columns:1fr;gap:24px;}.services-grid:before {display:none;}.services-grid .service-card {min-height:260px;padding:24px;}
  .contact-page {padding:40px 24px;}.whatsapp-button {width:100%;}.join-mission {padding:30px 24px;}.join-mission h2 {margin-bottom:20px;}
  .donation-hero {min-height:513px;padding:60px 24px;}.donation-hero h1 {font-size:30px;}.donation-hero p {font-size:16px;}.give-section {padding:40px 24px;min-height:451px;}.bank-transfer {padding:24px;}.bank-details {margin-left:0;margin-right:0;font-size:18px;}.support-mission {padding:60px 24px;}
  .about-intro {padding:60px 24px;min-height:0;}.about-intro p {font-size:16px;margin-top:36px;}.about-start,.about-growth,.about-martha,.founders-section {padding:40px 24px;}.about-brothers {height:auto;aspect-ratio:1281/584;width:100%;margin:0;}.about-community {padding:0 24px;grid-template-columns:1fr;}.about-community img {height:auto;}.about-community .about-food,.about-community .about-children {height:auto;}.founder {grid-template-columns:1fr;gap:24px;}.founder-photo {width:100%;height:auto;aspect-ratio:1;}.legal-status {padding:40px 24px;grid-template-columns:1fr;gap:24px;}.certificate-photo {width:100%;height:auto;}

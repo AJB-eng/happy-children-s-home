@@ -39,7 +39,8 @@ export const Route = createFileRoute('/')({
   head: () =>
     pageHead(
       'Home',
-      'We give back to the needy community. Supporting education, food, healthcare, and love for vulnerable children in Kumi.'
+      'Supporting vulnerable children in Kumi, Uganda through education, nutrition, medical care, safe shelter, and love. Help us restore hope today.',
+      '/'
     ),
   // Option 1: Commented out loader for running purely client-side without Wix context:
   // loader: ({ context }) => context.queryClient.ensureQueryData(wixSiteOptions),
@@ -63,6 +64,9 @@ function Index() {
   return (
     <Site>
       <section className="home-opening">
+        <h1 className="sr-only">
+          Happy Children's Home – Orphan Support, Child Sponsorship & Community Care in Kumi, Uganda
+        </h1>
         <div className="home-actions">
           <DonateButton>Donate Now</DonateButton>
           <Button asChild variant="wixOutline" className="program-button">
@@ -72,7 +76,7 @@ function Index() {
         <img
           className="community-image"
           src={community}
-          alt="Happy Children's Home community gathering"
+          alt="Happy Children's Home community gathering of vulnerable children and guardians in Kumi, Uganda"
           width={741}
           height={375}
           fetchPriority="high"
@@ -110,7 +114,7 @@ function Index() {
           </div>
           <img
             src={brothers}
-            alt="Allan, Shadrack, and Elvis"
+            alt="Allan, Shadrack, and Elvis – the three abandoned brothers whose story began Happy Children's Home in 2023"
             width={521}
             height={286}
             loading="lazy"
@@ -126,7 +130,7 @@ function Index() {
             <article className="service-card" key={s.name}>
               <img
                 src={s.icon}
-                alt={s.name}
+                alt={`${s.name} support program for vulnerable children at Happy Children's Home Kumi`}
                 width={48}
                 height={48}
                 loading="lazy"
@@ -147,7 +151,7 @@ function Index() {
           <img
             className="martha-portrait"
             src={martha}
-            alt="Martha"
+            alt="Martha – 14-year-old girl striving for education and sibling care supported by Happy Children's Home"
             width={361}
             height={513}
             loading="lazy"
@@ -156,7 +160,7 @@ function Index() {
           <img
             className="family-image"
             src={family}
-            alt="Martha and her family"
+            alt="Martha and her siblings receiving family protection and educational sponsorship in Kumi District"
             width={638}
             height={283}
             loading="lazy"

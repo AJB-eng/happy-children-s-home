@@ -61,7 +61,7 @@ export function Site({ children }: { children: ReactNode }) {
         <Link to="/" className="site-logo">
           <img
             src={logo}
-            alt="Happy Children's Home"
+            alt="Happy Children's Home – Community-Based Organisation in Kumi, Uganda"
             width={189}
             height={189}
             fetchPriority="high"
@@ -107,7 +107,7 @@ export function Site({ children }: { children: ReactNode }) {
             <Link to="/">
               <img
                 src={logo}
-                alt="Happy Children's Home"
+                alt="Happy Children's Home – Love, Peace, and Joy in Kumi, Uganda"
                 className="footer-logo"
                 width={169}
                 height={169}

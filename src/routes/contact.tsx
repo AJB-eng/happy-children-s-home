@@ -8,7 +8,8 @@ export const Route = createFileRoute('/contact')({
   head: () =>
     pageHead(
       'Get in Touch',
-      'Contact Happy Children’s Home in Okouba Village, Kumi, Uganda.'
+      'Contact Happy Children’s Home in Okouba Village, Kumi District, Uganda. Reach out by phone, email, or WhatsApp to support vulnerable children.',
+      '/contact'
     ),
   loader: ({ context }) => context.queryClient.ensureQueryData(wixSiteOptions),
   component: Contact,
@@ -19,7 +20,7 @@ function Contact() {
   return (
     <Site>
       <section className="contact-page">
-        <h2>Get in Touch</h2>
+        <h1>Get in Touch</h1>
         <div className="contact-details">
           <h3>Phone</h3>
           <a href={`tel:${data.phone.replace(/\s/g, '')}`}>{data.phone.replace(/\s/g, '')}</a>

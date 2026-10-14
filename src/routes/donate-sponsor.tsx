@@ -7,7 +7,8 @@ export const Route = createFileRoute('/donate-sponsor')({
   head: () =>
     pageHead(
       'Donate / Sponsor',
-      'Your kindness changes a story. Support vulnerable children through donations or child sponsorship.'
+      'Your kindness changes a story. Support and sponsor vulnerable children and orphans in Kumi, Uganda through donations, school fees, and food support.',
+      '/donate-sponsor'
     ),
   loader: ({ context }) => context.queryClient.ensureQueryData(wixSiteOptions),
   component: Donate,
@@ -20,7 +21,7 @@ function Donate() {
         <img
           className="donation-cover"
           src={donationHero}
-          alt="Happy Children's Home"
+          alt="Children smiling at Happy Children's Home – Support and sponsor a child in Kumi, Uganda"
           width={2048}
           height={1024}
           fetchPriority="high"

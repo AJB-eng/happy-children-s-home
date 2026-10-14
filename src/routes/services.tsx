@@ -6,7 +6,8 @@ export const Route = createFileRoute('/services')({
   head: () =>
     pageHead(
       'Our Services',
-      'Educational support, food and balanced nutrition, shelter and bedding, and essential medical care.'
+      'Explore our core outreach programs: educational support, balanced nutrition, safe shelter, and medical care for children in Kumi, Uganda.',
+      '/services'
     ),
   loader: ({ context }) => context.queryClient.ensureQueryData(wixSiteOptions),
   component: Services,
@@ -19,18 +20,25 @@ const names = [
   'Essential Medical Care',
 ];
 
+const serviceAlts: Record<string, string> = {
+  'Educational Support': 'Educational Support – School fees, exercise books, uniforms, and scholastic supplies in Kumi',
+  'Food & Balanced Nutrition': 'Food and Balanced Nutrition – Nutritious daily meals for orphans and vulnerable children',
+  'Shelter & Bedding': 'Safe Shelter and Bedding – Clean accommodations, mattresses, blankets, and protective mosquito nets',
+  'Essential Medical Care': 'Essential Medical Care – Emergency healthcare, checkups, and wellness clinic support',
+};
+
 function Services() {
   const text = pageText('Services');
   return (
     <Site>
       <section className="services-page">
-        <h2>Our Services</h2>
+        <h1>Our Services</h1>
         <div className="services-grid">
           {names.map((name, i) => (
             <article className="service-card" key={name}>
               <img
                 src={servicePhotos[i]}
-                alt={name}
+                alt={serviceAlts[name] ?? `${name} program at Happy Children's Home`}
                 width={48}
                 height={48}
                 loading="lazy"

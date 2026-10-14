@@ -18,7 +18,8 @@ export const Route = createFileRoute('/about')({
   head: () =>
     pageHead(
       'Our Story',
-      'From three children to forty: the story of Happy Children’s Home in Kumi, Uganda.'
+      'From three children to forty: the inspiring story of Happy Children’s Home in Kumi, Uganda rescuing orphans and vulnerable youth.',
+      '/about'
     ),
   loader: ({ context }) => context.queryClient.ensureQueryData(wixSiteOptions),
   component: About,
@@ -30,7 +31,7 @@ function About() {
   return (
     <Site>
       <section className="about-intro">
-        <h1>Our Story</h1>
+        <h1>Our Story: The Journey of Happy Children's Home</h1>
         <p>{between(text, 'Our Story', 'It Started With Three Children')}</p>
       </section>
 
@@ -42,7 +43,7 @@ function About() {
       <img
         src={brothers}
         className="about-brothers"
-        alt="Allan, Shadrack, and Elvis"
+        alt="Allan, Shadrack, and Elvis – the three brothers whose arrival in 2023 founded Happy Children's Home"
         width={1281}
         height={584}
         loading="lazy"
@@ -59,7 +60,7 @@ function About() {
         <Paragraphs text={between(text, "Martha's Journey", 'Meet the Founders')} />
         <img
           src={family}
-          alt="Martha and her siblings"
+          alt="Martha and her siblings receiving safe shelter, healthcare, and education support at Happy Children's Home"
           width={638}
           height={283}
           loading="lazy"
@@ -70,7 +71,7 @@ function About() {
       <section className="about-community">
         <img
           src={community}
-          alt="Happy Children's Home Community"
+          alt="Children, founders, and community guardians gathered at Happy Children's Home sanctuary in Kumi"
           width={741}
           height={610}
           loading="lazy"
@@ -80,7 +81,7 @@ function About() {
           <img
             src={aboutFood}
             className="about-food"
-            alt="Nutritious food distribution"
+            alt="Nutritious food distribution providing daily balanced meals for orphans and children in Kumi, Uganda"
             width={715}
             height={291}
             loading="lazy"
@@ -89,7 +90,7 @@ function About() {
           <img
             src={aboutChildren}
             className="about-children"
-            alt="Children of Happy Children's Home"
+            alt="Vulnerable children smiling during community learning activities at Happy Children's Home"
             width={681}
             height={291}
             loading="lazy"
@@ -109,7 +110,7 @@ function About() {
               <img
                 className="founder-photo"
                 src={img as string}
-                alt={name as string}
+                alt={`${name as string} – ${role as string === 'FOUNDER' ? 'Founder & Care Director' : 'Co-Founder & Operations Director'} of Happy Children's Home in Kumi, Uganda`}
                 width={500}
                 height={500}
                 loading="lazy"
@@ -133,7 +134,7 @@ function About() {
         <img
           className="certificate-photo"
           src={certificate}
-          alt="Official Registration Certificate"
+          alt="Official Community-Based Organisation Registration Certificate of Happy Children's Home in Kumi District, Uganda"
           width={500}
           height={347}
           loading="lazy"
