@@ -127,8 +127,8 @@ function Index() {
               <img
                 src={s.icon}
                 alt={s.name}
-                width={26}
-                height={24}
+                width={48}
+                height={48}
                 loading="lazy"
                 decoding="async"
               />
