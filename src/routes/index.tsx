@@ -69,7 +69,16 @@ function Index() {
             <Link to="/services">Explore Our Programs</Link>
           </Button>
         </div>
-        <img className="community-image" src={community} alt="Happy Children's Home community gathering" />
+        <img
+          className="community-image"
+          src={community}
+          alt="Happy Children's Home community gathering"
+          width={741}
+          height={375}
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+        />
       </section>
 
       <section className="statistics">
@@ -99,7 +108,14 @@ function Index() {
               </Button>
             </div>
           </div>
-          <img src={brothers} alt="Allan, Shadrack, and Elvis" />
+          <img
+            src={brothers}
+            alt="Allan, Shadrack, and Elvis"
+            width={521}
+            height={286}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </section>
 
@@ -108,7 +124,14 @@ function Index() {
         <div className="home-service-grid">
           {homeServices?.map((s) => (
             <article className="service-card" key={s.name}>
-              <img src={s.icon} alt="" />
+              <img
+                src={s.icon}
+                alt={s.name}
+                width={26}
+                height={24}
+                loading="lazy"
+                decoding="async"
+              />
               <h3>{s.name}</h3>
               <p>{s.description}</p>
             </article>
@@ -121,8 +144,24 @@ function Index() {
 
       <section className="martha-story">
         <div className="martha-images">
-          <img className="martha-portrait" src={martha} alt="Martha" />
-          <img className="family-image" src={family} alt="Martha and her family" />
+          <img
+            className="martha-portrait"
+            src={martha}
+            alt="Martha"
+            width={361}
+            height={513}
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            className="family-image"
+            src={family}
+            alt="Martha and her family"
+            width={638}
+            height={283}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="martha-copy">
           <h2 data-reveal>{marthaTitle}</h2>

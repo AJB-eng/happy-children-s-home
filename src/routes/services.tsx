@@ -28,7 +28,14 @@ function Services() {
         <div className="services-grid">
           {names.map((name, i) => (
             <article className="service-card" key={name}>
-              <img src={servicePhotos[i]} alt={name} />
+              <img
+                src={servicePhotos[i]}
+                alt={name}
+                width={48}
+                height={48}
+                loading="lazy"
+                decoding="async"
+              />
               <h3>{name}</h3>
               <p>{between(text, name, names[i + 1] ?? 'Your Kindness Changes a Story')}</p>
             </article>

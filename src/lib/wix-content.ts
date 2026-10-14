@@ -3,11 +3,8 @@ import assets from '@/data/wix-assets.json';
 
 export const originalUrl = 'https://barungijoshua.wixsite.com/happy-childrens-hom';
 export function image(id: string) {
-  const localUrl = (assets as Record<string, string>)[id];
-  if (typeof window !== 'undefined' && !window.location.host.includes('lovable') && localUrl?.startsWith('/__l5e/')) {
-    return `https://static.wixstatic.com/media/${id}`;
-  }
-  return localUrl || `https://static.wixstatic.com/media/${id}`;
+  if (!id) return '';
+  return (assets as Record<string, string>)[id] ?? `/assets/${id.replace(/\.(jpg|jpeg|png)$/i, '.webp')}`;
 }
 export const logo = image('1ea502_2d64a9f7aaf249f3aefd64de277cf45a~mv2.png');
 export const community = image('1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.jpeg');

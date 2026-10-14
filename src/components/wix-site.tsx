@@ -59,7 +59,15 @@ export function Site({ children }: { children: ReactNode }) {
       </a>
       <header className="site-header">
         <Link to="/" className="site-logo">
-          <img src={logo} alt="Happy Children's Home" />
+          <img
+            src={logo}
+            alt="Happy Children's Home"
+            width={189}
+            height={189}
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+          />
         </Link>
         <Button
           variant="ghost"
@@ -97,7 +105,15 @@ export function Site({ children }: { children: ReactNode }) {
         <div className="footer-columns">
           <div>
             <Link to="/">
-              <img src={logo} alt="Happy Children's Home" className="footer-logo" />
+              <img
+                src={logo}
+                alt="Happy Children's Home"
+                className="footer-logo"
+                width={169}
+                height={169}
+                loading="lazy"
+                decoding="async"
+              />
             </Link>
           </div>
           <div className="footer-address">

@@ -17,7 +17,16 @@ function Donate() {
   return (
     <Site>
       <section className="donation-hero">
-        <img className="donation-cover" src={donationHero} alt="Happy Children's Home" />
+        <img
+          className="donation-cover"
+          src={donationHero}
+          alt="Happy Children's Home"
+          width={2048}
+          height={1024}
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+        />
         <div>
           <h1>
             Your Kindness Changes
