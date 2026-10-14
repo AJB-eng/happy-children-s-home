@@ -290,8 +290,9 @@ a[data-slot],.program-button {font-size:16px;}
 .footer-bottom {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:start;}
 .footer-bottom p,.footer-bottom a {font-size:14px;}
 .footer-bottom>div {display:flex;gap:24px;margin-right:45px;}
-.reveal-ready {opacity:0;transform:translateY(32px);transition:opacity 1.2s ease,transform 1.2s ease;}
+.reveal-ready {opacity:0;transform:translateY(16px);transition:opacity 0.35s ease-out,transform 0.35s ease-out;}
 .reveal-ready.revealed {opacity:1;transform:none;}
+.home-services, .martha-story, .founders-section, .legal-status {content-visibility:auto;contain-intrinsic-size:0 400px;}
 @media(max-width:1000px) {
  h1 {font-size:30px;}h2 {font-size:28px;}h3 {font-size:24px;}
  .site-header {height:167px;}.site-logo {width:132px;height:132px;top:34px;left:50%;transform:translateX(-50%);}

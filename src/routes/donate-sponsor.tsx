@@ -4,12 +4,20 @@ import { Button } from '@/components/ui/button';
 import { kindness, pageText, between, pageHead, donationHero } from '@/lib/wix-content';
 
 export const Route = createFileRoute('/donate-sponsor')({
-  head: () =>
-    pageHead(
+  head: () => {
+    const baseHead = pageHead(
       'Donate / Sponsor',
       'Your kindness changes a story. Support and sponsor vulnerable children and orphans in Kumi, Uganda through donations, school fees, and food support.',
       '/donate-sponsor'
-    ),
+    );
+    return {
+      ...baseHead,
+      links: [
+        ...(baseHead.links ?? []),
+        { rel: 'preload', as: 'image', href: donationHero, type: 'image/webp', fetchPriority: 'high' },
+      ],
+    };
+  },
   loader: ({ context }) => context.queryClient.ensureQueryData(wixSiteOptions),
   component: Donate,
 });

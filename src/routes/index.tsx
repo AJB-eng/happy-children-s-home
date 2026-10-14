@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { queryOptions } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { Site, wixSiteOptions, DonateButton, CallToAction, Paragraphs } from '@/components/wix-site';
-import { community, brothers, martha, family, homeBlocks, homeServices, pageHead } from '@/lib/wix-content';
+import { logo, community, brothers, martha, family, homeBlocks, homeServices, pageHead } from '@/lib/wix-content';
 
 // Fallback mock object for wixSiteOptions when Wix context/API is unavailable on localhost
 export const fallbackWixSiteOptions = queryOptions({
@@ -36,12 +36,21 @@ export const fallbackHomeBlocks: string[] = [
 ];
 
 export const Route = createFileRoute('/')({
-  head: () =>
-    pageHead(
+  head: () => {
+    const baseHead = pageHead(
       'Home',
       'Supporting vulnerable children in Kumi, Uganda through education, nutrition, medical care, safe shelter, and love. Help us restore hope today.',
       '/'
-    ),
+    );
+    return {
+      ...baseHead,
+      links: [
+        ...(baseHead.links ?? []),
+        { rel: 'preload', as: 'image', href: community, type: 'image/webp', fetchPriority: 'high' },
+        { rel: 'preload', as: 'image', href: logo, type: 'image/webp', fetchPriority: 'high' },
+      ],
+    };
+  },
   // Option 1: Commented out loader for running purely client-side without Wix context:
   // loader: ({ context }) => context.queryClient.ensureQueryData(wixSiteOptions),
 
