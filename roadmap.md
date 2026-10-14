@@ -1,4 +1,6 @@
 # Wix replica
-- [ ] Retrieve original site content and image assets through Wix.
-- [ ] Mirror the original pages, layout, typography, and navigation.
-- [ ] Verify rendered pages and document any access limitations.
+- [x] Retrieve original published copy and available Wix assets.
+- [ ] Audit and polish the homepage against live Wix.
+- [ ] Audit and polish About, Services, Donate / Sponsor, and Contact.
+- [ ] Match original images, typography, hover effects, and animations.
+- [ ] Verify phone, tablet, and computer layouts and document remaining limitations.
