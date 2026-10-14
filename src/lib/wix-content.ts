@@ -2,13 +2,31 @@ import published from '@/data/wix-published.json';
 import assets from '@/data/wix-assets.json';
 
 export const originalUrl = 'https://barungijoshua.wixsite.com/happy-childrens-hom';
-export function image(id: string) { return (assets as Record<string, string>)[id] ?? ''; }
+export function image(id: string) {
+  const localUrl = (assets as Record<string, string>)[id];
+  if (typeof window !== 'undefined' && !window.location.host.includes('lovable') && localUrl?.startsWith('/__l5e/')) {
+    return `https://static.wixstatic.com/media/${id}`;
+  }
+  return localUrl || `https://static.wixstatic.com/media/${id}`;
+}
 export const logo = image('1ea502_2d64a9f7aaf249f3aefd64de277cf45a~mv2.png');
 export const community = image('1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.jpeg');
 export const brothers = image('1ea502_65c2653d114f42f8a0696299937f6ffe~mv2.jpg');
 export const martha = image('1ea502_2defa128406b41d188e2d065583baa18~mv2.jpeg');
 export const family = image('1ea502_54c1bad725d143b393d09677fae9f38d~mv2.jpg');
-export const homeBlocks = published.home.text.split('\n\n');
+export const founderIrene = image('1ea502_ec54613dbdb941f0b4235bfe2da4fef2~mv2.png');
+export const founderJoseph = image('1ea502_77818d0f5ecd417d8342cd3e2ac54421~mv2.png');
+export const certificate = image('1ea502_02b869276bec41cba32052d936f63048~mv2.jpg');
+export const donationHero = image('1ea502_f4c849928c6c4fafbdfe516fba4e80b9~mv2.jpg');
+export const servicePhotos = [
+  image('1ea502_2d8226217af643ab9b32b6510739b4c9~mv2.jpg'),
+  image('1ea502_9086745a2fb84dd2a81d8f9507beb235~mv2.jpg'),
+  image('1ea502_684f2bf9de2642f08a89444128244a4d~mv2.jpg'),
+  image('1ea502_c6c2817e10554de7ac7f81c1aae500e9~mv2.jpg'),
+];
+export const aboutFood = image('1ea502_85f5ad04ba874e128fb142e6adbe9703~mv2.jpeg');
+export const aboutChildren = image('1ea502_87aa517e9566479aa2f9cc9a62f62de6~mv2.jpeg');
+export const homeBlocks = (published?.home?.text ?? '').split('\n\n');
 export function pageText(title: string) { return published.pages.find(p => p.title === title)?.text ?? ''; }
 export function between(text: string, from: string, to: string) {
   return text.split(from)[1]?.split(to)[0]?.replace(/\u200b/g, '').trim() ?? '';
