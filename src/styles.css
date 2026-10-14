@@ -205,7 +205,7 @@ section,main,.story-grid>div {min-width:0;}
 .service-card {border:1px solid var(--border);border-radius:2px;padding:32px;background:var(--background);}
 .home-service-grid .service-card {border:0;min-height:250px;}
 .service-card>img {width:48px;height:48px;object-fit:contain;margin-bottom:26px;}
-.home-service-grid .service-card>img {width:26px;height:24px;margin-bottom:16px;}
+.home-service-grid .service-card>img {width:44px;height:44px;object-fit:contain;margin-bottom:16px;}
 .service-card h3 {margin-bottom:22px;}
 .home-service-grid .service-card h3 {font-size:20px;line-height:1.1;margin-bottom:16px;}
 .home-service-grid .service-card p {font-size:14px;line-height:1.35;}
@@ -301,7 +301,7 @@ a[data-slot],.program-button {font-size:16px;}
  .community-image {width:100%;height:auto;aspect-ratio:342/177;margin:85px 0 0;}
  .statistics {min-height:385px;grid-template-columns:1fr;padding:60px 24px;gap:40px;}.statistics>div {padding:0;}.statistics>div+div:before {display:none;}.statistics strong {font-size:30px;min-height:0;max-width:none;margin-bottom:12px;}.statistics h3 {font-size:18px;max-width:none;}.statistics>div:last-child h3 {max-width:none;}
  .home-story {padding:90px 24px 30px;}.story-eyebrow {margin-bottom:44px;font-size:16px;}.story-grid {grid-template-columns:1fr;gap:40px;padding:0;}.story-grid h2 {margin-bottom:16px;}.story-grid p {max-width:none;margin-bottom:40px;}.story-grid>img {margin-top:0;}.story-grid a {margin:0 auto;display:flex;width:max-content;}
- .home-services {padding:60px 24px 40px;}.home-service-grid {grid-template-columns:1fr;gap:30px;margin:30px 0 40px;text-align:center;}.home-service-grid .service-card {padding:0;min-height:170px;}.home-service-grid .service-card>img {width:26px;height:48px;margin:0 auto 20px;}.home-service-grid .service-card h3 {font-size:18px;margin-bottom:24px;}
+ .home-services {padding:60px 24px 40px;}.home-service-grid {grid-template-columns:1fr;gap:30px;margin:30px 0 40px;text-align:center;}.home-service-grid .service-card {padding:0;min-height:170px;}.home-service-grid .service-card>img {width:44px;height:44px;object-fit:contain;margin:0 auto 20px;}.home-service-grid .service-card h3 {font-size:18px;margin-bottom:24px;}
  .martha-story {grid-template-columns:1fr;padding:40px 24px 0;}.martha-images {gap:24px;}.martha-portrait {width:100%;height:auto;aspect-ratio:342/299;margin:0;object-position:center;}.family-image {height:auto;aspect-ratio:638/283;margin:0;}.martha-copy {padding:48px 24px 60px;margin-top:0;}.martha-copy h2 {margin-bottom:12px;}.martha-copy p {max-width:none;margin-bottom:40px;}.martha-copy a {display:flex;margin:0 auto;}
  .kindness-band {padding:60px 24px;}.martha-story+.kindness-band {padding:80px 24px;}.home-contact {grid-template-columns:1fr;gap:16px;justify-items:center;padding:40px 24px;}
  .services-page {padding:60px 24px 40px;}.services-page>h2 {margin-bottom:40px;}.services-grid {grid-template-columns:1fr;gap:24px;}.services-grid:before {display:none;}.services-grid .service-card {min-height:260px;padding:24px;}
