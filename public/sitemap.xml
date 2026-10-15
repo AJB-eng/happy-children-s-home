@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://happychildrenshome.org/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp</image:loc>
+      <image:title>Happy Children's Home Community in Kumi, Uganda</image:title>
+      <image:caption>Rescuing vulnerable orphans and providing education, food, and safe shelter in Kumi, Uganda</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_65c2653d114f42f8a0696299937f6ffe~mv2.webp</image:loc>
+      <image:title>Allan, Shadrack, and Elvis - The Founding Story</image:title>
+      <image:caption>Three brothers whose arrival in 2023 founded Happy Children's Home</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_2defa128406b41d188e2d065583baa18~mv2.webp</image:loc>
+      <image:title>Martha's Journey of Hope</image:title>
+      <image:caption>Supporting vulnerable youth and their families in Kumi, Uganda</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://happychildrenshome.org/about</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_ec54613dbdb941f0b4235bfe2da4fef2~mv2.webp</image:loc>
+      <image:title>Lanyero Irene Okot - Founder and Care Director</image:title>
+      <image:caption>Dedicated caretaker and co-founder of Happy Children's Home</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_77818d0f5ecd417d8342cd3e2ac54421~mv2.webp</image:loc>
+      <image:title>Opio Joseph Ekodeu - Co-Founder and Operations Director</image:title>
+      <image:caption>Community leader and co-founder of Happy Children's Home</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_02b869276bec41cba32052d936f63048~mv2.webp</image:loc>
+      <image:title>Official CBO Registration Certificate</image:title>
+      <image:caption>Certified Community-Based Organisation in Kumi District, Uganda</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://happychildrenshome.org/services</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_2d8226217af643ab9b32b6510739b4c9~mv2.webp</image:loc>
+      <image:title>Educational Support Program</image:title>
+      <image:caption>Providing school fees, uniforms, and scholastic supplies for orphans</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_9086745a2fb84dd2a81d8f9507beb235~mv2.webp</image:loc>
+      <image:title>Food and Balanced Nutrition Program</image:title>
+      <image:caption>Daily nourishing meals for over 40 vulnerable children</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_684f2bf9de2642f08a89444128244a4d~mv2.webp</image:loc>
+      <image:title>Shelter and Bedding Program</image:title>
+      <image:caption>Safe, clean accommodations and protective mosquito nets</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_c6c2817e10554de7ac7f81c1aae500e9~mv2.webp</image:loc>
+      <image:title>Essential Medical Care Program</image:title>
+      <image:caption>Healthcare checkups, emergency medical treatment, and wellness support</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://happychildrenshome.org/donate-sponsor</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://happychildrenshome.org/assets/1ea502_f4c849928c6c4fafbdfe516fba4e80b9~mv2.webp</image:loc>
+      <image:title>Support and Sponsor a Child</image:title>
+      <image:caption>Your kindness changes a story: direct sponsorship and donations for children in Kumi</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://happychildrenshome.org/contact</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+</urlset>

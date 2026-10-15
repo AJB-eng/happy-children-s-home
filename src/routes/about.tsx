@@ -12,6 +12,7 @@ import {
   founderJoseph,
   certificate,
   pageHead,
+  breadcrumbSchema,
 } from '@/lib/wix-content';
 
 export const Route = createFileRoute('/about')({
@@ -26,10 +27,15 @@ export const Route = createFileRoute('/about')({
 });
 
 const text = pageText('About');
+const breadcrumbs = breadcrumbSchema([{ name: 'Our Story', path: '/about' }]);
 
 function About() {
   return (
     <Site>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="about-intro">
         <h1>Our Story: The Journey of Happy Children's Home</h1>
         <p>{between(text, 'Our Story', 'It Started With Three Children')}</p>

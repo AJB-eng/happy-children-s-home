@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { Site, wixSiteOptions } from '@/components/wix-site';
 import { Button } from '@/components/ui/button';
-import { pageHead, pageText, between } from '@/lib/wix-content';
+import { pageHead, pageText, between, breadcrumbSchema } from '@/lib/wix-content';
 
 export const Route = createFileRoute('/contact')({
   head: () =>
@@ -15,10 +15,16 @@ export const Route = createFileRoute('/contact')({
   component: Contact,
 });
 
+const breadcrumbs = breadcrumbSchema([{ name: 'Contact Us', path: '/contact' }]);
+
 function Contact() {
   const { data } = useSuspenseQuery(wixSiteOptions);
   return (
     <Site>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="contact-page">
         <h1>Get in Touch</h1>
         <div className="contact-details">

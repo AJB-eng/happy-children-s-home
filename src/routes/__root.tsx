@@ -78,14 +78,67 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Happy Children's Home" },
-      { name: "description", content: "Happy Children's Home, a Community-Based Organisation in Kumi, Uganda." },
-      { property: "og:title", content: "Happy Children's Home" },
-      { property: "og:description", content: "Supporting vulnerable children in Kumi, Uganda." },
+      { name: "theme-color", content: "#50875b" },
+      { title: "Happy Children's Home | Orphan Care & Education in Kumi, Uganda" },
+      {
+        name: "description",
+        content:
+          "Happy Children's Home is a registered Community-Based Organisation in Kumi, Uganda rescuing orphans and providing education, food, healthcare, and safe shelter.",
+      },
+      {
+        name: "robots",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
+      {
+        name: "googlebot",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
+      {
+        name: "bingbot",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
+      ...(import.meta.env.VITE_GOOGLE_SITE_VERIFICATION
+        ? [{ name: "google-site-verification", content: import.meta.env.VITE_GOOGLE_SITE_VERIFICATION }]
+        : []),
+      { property: "og:site_name", content: "Happy Children's Home" },
+      { property: "og:locale", content: "en_US" },
       { property: "og:type", content: "website" },
+      {
+        property: "og:title",
+        content: "Happy Children's Home | Orphan Care & Education in Kumi, Uganda",
+      },
+      {
+        property: "og:description",
+        content:
+          "Supporting vulnerable children in Kumi, Uganda through education, nutrition, medical care, safe shelter, and love.",
+      },
+      {
+        property: "og:image",
+        content: "https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
+      },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Happy Children's Home Community in Kumi, Uganda" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "Happy Children's Home | Orphan Care & Education in Kumi, Uganda",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Supporting vulnerable children in Kumi, Uganda through education, nutrition, medical care, safe shelter, and love.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
+      },
+      { name: "twitter:image:alt", content: "Happy Children's Home Community in Kumi, Uganda" },
     ],
     links: [
+      { rel: "canonical", href: "https://happychildrenshome.org/" },
+      { rel: "alternate", hrefLang: "en", href: "https://happychildrenshome.org/" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://happychildrenshome.org/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" },
@@ -102,40 +155,62 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-const organizationSchema = {
+const siteGraphSchema = {
   "@context": "https://schema.org",
-  "@type": "NGO",
-  name: "Happy Children's Home",
-  alternateName: "Happy Children's Home Kumi",
-  url: "https://happychildrenshome.org",
-  logo: "https://happychildrenshome.org/assets/1ea502_2d64a9f7aaf249f3aefd64de277cf45a~mv2.webp",
-  image: "https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
-  description: "Community-Based Organisation in Kumi, Uganda dedicated to rescuing vulnerable orphans and providing education, food, healthcare, and safe shelter.",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Okouba Village, Omatenga Road, North Division",
-    addressLocality: "Kumi Municipal Council",
-    addressRegion: "Kumi District",
-    addressCountry: "UG",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+256 705 775 486",
-    contactType: "General Inquiries",
-    email: "happychildrenshome9@gmail.com",
-    availableLanguage: ["English", "Ateso"],
-  },
-  foundingDate: "2023",
-  founders: [
+  "@graph": [
     {
-      "@type": "Person",
-      name: "Lanyero Irene Okot",
-      jobTitle: "Founder & Care Director",
+      "@type": "WebSite",
+      "@id": "https://happychildrenshome.org/#website",
+      url: "https://happychildrenshome.org/",
+      name: "Happy Children's Home",
+      description:
+        "Community-Based Organisation in Kumi, Uganda dedicated to rescuing vulnerable orphans and providing education, food, healthcare, and safe shelter.",
+      publisher: {
+        "@id": "https://happychildrenshome.org/#organization",
+      },
+      inLanguage: "en",
     },
     {
-      "@type": "Person",
-      name: "Opio Joseph Ekodeu",
-      jobTitle: "Co-Founder & Operations Director",
+      "@type": "NGO",
+      "@id": "https://happychildrenshome.org/#organization",
+      name: "Happy Children's Home",
+      alternateName: "Happy Children's Home Kumi",
+      url: "https://happychildrenshome.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://happychildrenshome.org/assets/1ea502_2d64a9f7aaf249f3aefd64de277cf45a~mv2.webp",
+        caption: "Happy Children's Home Logo",
+      },
+      image: "https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
+      description:
+        "Community-Based Organisation in Kumi, Uganda dedicated to rescuing vulnerable orphans and providing education, food, healthcare, and safe shelter.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Okouba Village, Omatenga Road, North Division",
+        addressLocality: "Kumi Municipal Council",
+        addressRegion: "Kumi District",
+        addressCountry: "UG",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+256 705 775 486",
+        contactType: "General Inquiries",
+        email: "happychildrenshome9@gmail.com",
+        availableLanguage: ["English", "Ateso"],
+      },
+      foundingDate: "2023",
+      founders: [
+        {
+          "@type": "Person",
+          name: "Lanyero Irene Okot",
+          jobTitle: "Founder & Care Director",
+        },
+        {
+          "@type": "Person",
+          name: "Opio Joseph Ekodeu",
+          jobTitle: "Co-Founder & Operations Director",
+        },
+      ],
     },
   ],
 };
@@ -147,7 +222,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraphSchema) }}
         />
       </head>
       <body>

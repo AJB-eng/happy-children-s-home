@@ -1,19 +1,35 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "bun run build || npm run build",
-  "outputDirectory": ".output/public",
+  "buildCommand": "bun run build",
+  "outputDirectory": "dist",
   "framework": null,
-  "rewrites": [
+  "headers": [
     {
-      "source": "/assets/(.*)",
-      "destination": "/assets/$1"
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
     {
       "source": "/assets/(.*)",
       "headers": [

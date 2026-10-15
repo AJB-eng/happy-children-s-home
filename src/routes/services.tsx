@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { Site, wixSiteOptions, CallToAction } from '@/components/wix-site';
-import { servicePhotos, pageText, between, pageHead } from '@/lib/wix-content';
+import { servicePhotos, pageText, between, pageHead, breadcrumbSchema } from '@/lib/wix-content';
 
 export const Route = createFileRoute('/services')({
   head: () =>
@@ -27,10 +27,16 @@ const serviceAlts: Record<string, string> = {
   'Essential Medical Care': 'Essential Medical Care – Emergency healthcare, checkups, and wellness clinic support',
 };
 
+const breadcrumbs = breadcrumbSchema([{ name: 'Our Services', path: '/services' }]);
+
 function Services() {
   const text = pageText('Services');
   return (
     <Site>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="services-page">
         <h1>Our Services</h1>
         <div className="services-grid">

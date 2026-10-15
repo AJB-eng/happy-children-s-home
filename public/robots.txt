@@ -1,14 +1,18 @@
+# Robots.txt for Happy Children's Home (https://happychildrenshome.org)
+# Allow complete access to search engine crawlers for full indexation
+
+User-agent: *
+Allow: /
+
 User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
-Allow: /
+# Canonical Sitemap location
+Sitemap: https://happychildrenshome.org/sitemap.xml

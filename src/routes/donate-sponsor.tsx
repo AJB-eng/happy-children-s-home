@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { Site, wixSiteOptions } from '@/components/wix-site';
 import { Button } from '@/components/ui/button';
-import { kindness, pageText, between, pageHead, donationHero } from '@/lib/wix-content';
+import { kindness, pageText, between, pageHead, donationHero, breadcrumbSchema } from '@/lib/wix-content';
 
 export const Route = createFileRoute('/donate-sponsor')({
   head: () => {
@@ -22,9 +22,15 @@ export const Route = createFileRoute('/donate-sponsor')({
   component: Donate,
 });
 
+const breadcrumbs = breadcrumbSchema([{ name: 'Donate & Sponsor', path: '/donate-sponsor' }]);
+
 function Donate() {
   return (
     <Site>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="donation-hero">
         <img
           className="donation-cover"
