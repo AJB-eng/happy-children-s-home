@@ -114,7 +114,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         property: "og:image",
-        content: "https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
+        content: "https://happychildrenshome.com/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
       },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -131,14 +131,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         name: "twitter:image",
-        content: "https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
+        content: "https://happychildrenshome.com/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
       },
       { name: "twitter:image:alt", content: "Happy Children's Home Community in Kumi, Uganda" },
     ],
     links: [
-      { rel: "canonical", href: "https://happychildrenshome.org/" },
-      { rel: "alternate", hrefLang: "en", href: "https://happychildrenshome.org/" },
-      { rel: "alternate", hrefLang: "x-default", href: "https://happychildrenshome.org/" },
+      { rel: "canonical", href: "https://happychildrenshome.com/" },
+      { rel: "alternate", hrefLang: "en", href: "https://happychildrenshome.com/" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://happychildrenshome.com/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" },
@@ -160,28 +160,28 @@ const siteGraphSchema = {
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://happychildrenshome.org/#website",
-      url: "https://happychildrenshome.org/",
+      "@id": "https://happychildrenshome.com/#website",
+      url: "https://happychildrenshome.com/",
       name: "Happy Children's Home",
       description:
         "Community-Based Organisation in Kumi, Uganda dedicated to rescuing vulnerable orphans and providing education, food, healthcare, and safe shelter.",
       publisher: {
-        "@id": "https://happychildrenshome.org/#organization",
+        "@id": "https://happychildrenshome.com/#organization",
       },
       inLanguage: "en",
     },
     {
       "@type": "NGO",
-      "@id": "https://happychildrenshome.org/#organization",
+      "@id": "https://happychildrenshome.com/#organization",
       name: "Happy Children's Home",
       alternateName: "Happy Children's Home Kumi",
-      url: "https://happychildrenshome.org",
+      url: "https://happychildrenshome.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://happychildrenshome.org/assets/1ea502_2d64a9f7aaf249f3aefd64de277cf45a~mv2.webp",
+        url: "https://happychildrenshome.com/assets/1ea502_2d64a9f7aaf249f3aefd64de277cf45a~mv2.webp",
         caption: "Happy Children's Home Logo",
       },
-      image: "https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
+      image: "https://happychildrenshome.com/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp",
       description:
         "Community-Based Organisation in Kumi, Uganda dedicated to rescuing vulnerable orphans and providing education, food, healthcare, and safe shelter.",
       address: {

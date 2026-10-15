@@ -34,8 +34,8 @@ export const serviceIcons = ['1ea502_6f8f875eaead4090825b5e14a6619051~mv2.jpg','
 export const homeServices = serviceNames.map((name, i) => ({name, description: between(published.home.text, `\n${name}\n`, i < 5 ? `\n${serviceNames[i+1]}\n` : 'See All Services'), icon: image(serviceIcons[i] ?? '')}));
 export function pageHead(title: string, description: string, path: string = '', ogImage?: string) {
   const pageTitle = title === 'Home' ? "Happy Children's Home | Orphan Care & Education in Kumi, Uganda" : `${title} | Happy Children's Home`;
-  const canonicalUrl = `https://happychildrenshome.org${path}`;
-  const defaultOgImage = ogImage ?? 'https://happychildrenshome.org/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp';
+  const canonicalUrl = `https://happychildrenshome.com${path}`;
+  const defaultOgImage = ogImage ?? 'https://happychildrenshome.com/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp';
 
   return {
     meta: [
@@ -77,13 +77,13 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://happychildrenshome.org/',
+        item: 'https://happychildrenshome.com/',
       },
       ...items.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 2,
         name: item.name,
-        item: `https://happychildrenshome.org${item.path}`,
+        item: `https://happychildrenshome.com${item.path}`,
       })),
     ],
   };

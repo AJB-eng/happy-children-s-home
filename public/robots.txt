@@ -1,4 +1,4 @@
-# Robots.txt for Happy Children's Home (https://happychildrenshome.org)
+# Robots.txt for Happy Children's Home (https://happychildrenshome.com)
 # Allow complete access to search engine crawlers for full indexation
 
 User-agent: *
@@ -15,4 +15,4 @@ User-agent: Bingbot
 Allow: /
 
 # Canonical Sitemap location
-Sitemap: https://happychildrenshome.org/sitemap.xml
+Sitemap: https://happychildrenshome.com/sitemap.xml
