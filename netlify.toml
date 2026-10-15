@@ -1,6 +1,9 @@
 [build]
-  command = "bun run build || npm run build"
-  publish = ".output/public"
+  command = "(which bun > /dev/null 2>&1 || npm install -g bun) && bun run build"
+  publish = "dist"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
 
 [[headers]]
   for = "/assets/*"
@@ -13,8 +16,3 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
