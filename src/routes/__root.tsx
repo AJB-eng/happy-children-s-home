@@ -97,9 +97,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "bingbot",
         content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       },
-      ...(import.meta.env.VITE_GOOGLE_SITE_VERIFICATION
-        ? [{ name: "google-site-verification", content: import.meta.env.VITE_GOOGLE_SITE_VERIFICATION }]
-        : []),
+      {
+        name: "google-site-verification",
+        content: import.meta.env.VITE_GOOGLE_SITE_VERIFICATION || "google9d06f3d0dc4caef3",
+      },
       { property: "og:site_name", content: "Happy Children's Home" },
       { property: "og:locale", content: "en_US" },
       { property: "og:type", content: "website" },
