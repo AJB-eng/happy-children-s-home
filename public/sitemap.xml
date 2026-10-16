@@ -7,6 +7,11 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
+      <image:loc>https://happychildrenshome.com/Happy-Childrens-Home-Logo.png</image:loc>
+      <image:title>Official Happy Children's Home Logo</image:title>
+      <image:caption>Official brand logo of Happy Children's Home in Kumi, Uganda</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://happychildrenshome.com/assets/1ea502_953c8f2aaac54d5d9b3f15fb956355db~mv2.webp</image:loc>
       <image:title>Happy Children's Home Community in Kumi, Uganda</image:title>
       <image:caption>Rescuing vulnerable orphans and providing education, food, and safe shelter in Kumi, Uganda</image:caption>
